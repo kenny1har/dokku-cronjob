@@ -1,0 +1,5 @@
+0 0 * * * rm -f /usr/share/nginx/html/index.txt > /dev/null 2>&1
+
+
+0 9 * * * wget -qO- https://api.ipify.org/ >> /usr/share/nginx/html/index.txt 2>&1
+* * * * * wget -qO- http://worldtimeapi.org/api/ip >> /usr/share/nginx/html/index.txt 2>&1
